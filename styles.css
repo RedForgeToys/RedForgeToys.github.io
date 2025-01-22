@@ -3,14 +3,52 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url("Images/Dander.jpg");
+    background-color: #cccccc;
 }
 
 header {
+    background-image: url("Images/Dander.jpg");
     background-color: #ff6f61;
     color: white;
     text-align: right;
     padding: 0.25em 2em;
+    width: auto;
 }
+
+header nav {
+    background-color: #333; /* Fondo oscuro */
+    color: white;
+    padding: 10px 0;
+}
+
+header nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrar el menú */
+}
+
+header nav .menu li {
+    margin: 0 15px;
+}
+
+header nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header nav .menu li a:hover {
+    background-color: #ff6f61; /* Color al pasar el ratón */
+    color: #fff;
+    border-radius: 5px;
+}
+
 
 header img {
     width: 100px;
