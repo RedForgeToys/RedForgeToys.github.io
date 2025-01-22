@@ -72,7 +72,7 @@ header img {
 }
 
 header h1 {
-    color:white
+    color:black
 }
 
 main {
@@ -80,7 +80,7 @@ main {
 }
 
 h1, h2 {
-    color: #333;
+    color: rosybrown;
 }
 
 #about, #team, #projects {
