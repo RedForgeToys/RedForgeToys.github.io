@@ -1,0 +1,67 @@
+main {
+    padding: 20px;
+    background-color: #CCEAF4;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.valor {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #800020;
+}
+
+.benchmarking table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.benchmarking th, .benchmarking td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.benchmarking th {
+    background-color: #800020;
+    color: white;
+}
+
+.grafica, .demanda, .natalidad, .valor-mercado, .benchmarking {
+    text-align: center;
+    padding: 20px;
+    background-color: #EFEFEF;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.analisis {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+#graficoMercado{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+#graficoDemanda{
+    width: 750px;
+    height: 750px;
+    margin: 0 auto;
+}
+#birthRateChart{
+    width: 750px;
+    height: 750px;
+    margin: 0 auto;
+}
+

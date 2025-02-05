@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Análisis Económico - Red Forge Toys</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/economico.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    </head>
+<body>
+    <header>
+        <img id="logo" src="Images/RedForgeToys_Logo.jpg" alt="logo" />
+        <h1>Red Forge Toys</h1>
+        <p>Innovación y Automatización para un Futuro Divertido</p>
+        <nav>
+            <ul class="menu">
+                <li><a class="menu home" href="index.html" data-title="Home"><span><span>Home</span></span></a></li>
+                <li><a class="menu gestion" href="https://github.com/anhernadezdu/Red-Forge-Toys-APM2024-2S" data-title="Gestión de Proyecto"><span><span>Gestión de Proyecto</span></span></a></li>
+                <li><a class="menu Produccion" href="#" data-title="Gestión de Producción y Automatización"><span><span>Gestión de Producción y Automatización</span></span></a></li>
+                <li><a class="menu evaluacion" href="#" data-title="Evaluación Económica del Proyecto"><span><span>Evaluación Económica del Proyecto</span></span></a></li>
+                <li><a class="menu celda" href="#" data-title="Celda de Manufactura Robotizada"><span><span>Celda de Manufactura Robotizada</span></span></a></li>
+                <li><a class="menu digital" href="#" data-title="Digital Factory"><span><span>Digital Factory</span></span></a></li>
+                <li><a class="menu plc" href="#" data-title="Controladores Industriales (PLC)"><span><span>Controladores Industriales (PLC)</span></span></a></li>
+                <li><a class="menu scada" href="#" data-title="Sistema de Supervisión SCADA"><span><span>Sistema de Supervisión SCADA</span></span></a></li>            
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="grafica">
+            <h2>Participación del Mercado Colombiano</h2>
+            <canvas id="graficoMercado"></canvas>
+            <p class="analisis">[Espacio reservado para análisis]</p>
+        </section>
+        
+        <section class="valor-mercado">
+            <h2>Valor Total del Mercado (2023)</h2>
+            <p class="valor">COP 448.570.000.000,00</p>
+        </section>
+        
+        <section class="benchmarking">
+            <h2>Benchmarking de Empresas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Empresa</th><th>Precio Figura de Acción (COP)</th><th>Rango de Ventas (COP)</th><th>Aprox. figuras vendidas 2023</th><th>Aprox. figuras vendidas 2032</th><th>Produccion por Minuto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Hasbro</td><td>65.000</td><td>60.000 a 80.000</td><td>1 538 462</td><td>2 621 351</td><td>4,99</td></tr>
+                    <tr><td>Mattel</td><td>60.000</td><td>60.000 a 80.000</td><td>2 416 667</td><td>4 117 705</td><td>7,83</td></tr>
+                    <tr><td>Colmuñecos</td><td>45.000</td><td>40.000 a 65.000</td><td>111 111</td><td>189 320</td><td>0,36</td></tr>
+                    <tr><td>Arisma</td><td>40.000</td><td>30.000 a 60.000</td><td>50 000</td><td>85 194</td><td>0,16</td></tr>
+                    <tr><td>Ip Imaginarte SAS</td><td>40.000</td><td>20.000 a 100.000</td><td>25 000</td><td>42 597</td><td>0,08</td></tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="demanda">
+            <h2>Demanda Mensual Proyectada</h2>
+            <canvas id="graficoDemanda"></canvas>
+        </section>
+        
+        <section class="natalidad">
+            <h2>Impacto de la Reducción de la Natalidad</h2>
+            <canvas id="birthRateChart"></canvas>
+            <p class="analisis">[Espacio reservado para análisis]</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Red Forge Toys. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const ctxMercado = document.getElementById('graficoMercado').getContext('2d');
+        new Chart(ctxMercado, { 
+            type: 'pie', 
+            data: { 
+                labels: ['Hasbro', 'Mattel', 'Inversiones Parra Pineros y Compañia', 'Colmuñecos', 'Exitoys', 'Fabrica de Muñecos y Comercializadora Muneplasticos Sas', 'Arisma', 'Ip Imaginarte SAS', 'Laurent', 'Otras'], 
+                datasets: [{ 
+                    data: [28, 41, 14, 1, 0, 1, 1, 0, 1, 13], 
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8D99AE', '#2B2D42', '#EF233C', '#D90429', '#A8DADC', '#457B9D', '#1D3557'] 
+                }] 
+            } ,
+            options: {
+                plugins: {
+                    datalabels: {
+                        formatter: (value, ctx) => value + '%',
+                        color: '#fff',
+                        font: { weight: 'bold' }
+                    }
+                }
+            }
+        });
+        
+        const ctxDemanda = document.getElementById('graficoDemanda').getContext('2d');
+        new Chart(ctxDemanda, { type: 'line', data: { labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], datasets: [{ label: 'Demanda 2025', data: [16537.6, 3434.1, 4807.692, 51208.8, 16357, 2060, 4120, 6181, 8241,5494,6868,164835], borderColor: 'blue', fill: false },
+        { label: 'Demanda 2032', data: [11256.35009,2363.124582,3308.374414,28357.49498,11256.35009,1417.874749,2835.749498,4253.624247,5671.498996,3780.999331,4726.249163,113429.9799], borderColor: 'red', fill: false }] } });
+         // Datos históricos
+         const historicalYears = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2008, 2009, 2010, 2011, 2012, 2013, 
+                                 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+        const historicalBirthRates = [22.11, 21.58, 21.02, 20.44, 19.85, 19.27, 18.69, 17.70, 17.28, 16.91, 16.61, 16.34, 
+                                      16.09, 15.83, 15.59, 15.35, 15.08, 14.84, 14.68, 14.44, 14.20, 13.92];
+
+        // Proyecciones (Estos valores deben ser reemplazados con los obtenidos en la proyección)
+        const projectedYears = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032];
+        const projectedBirthRates = [13.75, 13.58, 13.42, 13.25, 13.09, 12.93, 12.78, 12.63, 12.48, 12.34]; 
+
+        // Configuración de la gráfica
+        const ctx = document.getElementById('birthRateChart').getContext('2d');
+        const birthRateChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [...historicalYears, ...projectedYears],
+                datasets: [
+                    {
+                        label: 'Histórico',
+                        data: historicalBirthRates,
+                        borderColor: 'purple',
+                        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        fill: false
+                    },
+                    {
+                        label: 'Proyección',
+                        data: [...Array(historicalYears.length).fill(null), ...projectedBirthRates],
+                        borderColor: 'green',
+                        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        borderDash: [5, 5],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Año' } },
+                    y: { title: { display: true, text: 'Tasa de Natalidad (%)' } }
+                }
+            }
+        });
+        //const ctxNatalidad = document.getElementById('graficoNatalidad').getContext('2d');
+        //new Chart(ctxNatalidad, { type: 'line', data: { labels: ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032'], 
+        //datasets: [{ label: 'Demanda 2025', data: [22.11,21.58,21.02,20.44,19.85,19.27,18.69,18.17,17.7,17.28,16.91,16.61,16.34,16.09,15.83,15.59,15.35,15.08,14.84,14.68,14.44,14.2,13.92,13.74,13.58,13.29,13.15,13.03,12.90,12.79,12.69,12.59], borderColor: 'green', fill: false }] } });
+    </script>
+</body>
+</html>
