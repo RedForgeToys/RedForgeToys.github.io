@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Análisis Económico - Red Forge Toys</title>
         <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/economico.css">
+        <link rel="stylesheet" href="styles/gestion.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     </head>
@@ -31,8 +31,144 @@
     </header>
     <main>
 
+        <section class="seccion">
+            <h1>Ciclo Anual de Planificación de Proyectos de Desarrollo de Sitios Web</h1>    
+            <div class="timeline">
+                <div class="stage">
+                    <h3>1. Investigación y planeación</h3>
+                    <p><strong>Investigación previa y planteamiento del proyecto</strong></p>
+                    <ul>
+                        <li onclick="toggleDetails(this)">
+                            1.1. Gestión del Proyecto
+                            <div class="details"><ul>
+                                <li>Alcance del proyecto: establecer los objetivos del proyecto, alcance, tiempos y herramientas necesarias.</li>
+                                <li>Cronograma: estrablecer las actividades y tiempos para realizarlas.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            1.2 Estudio de Mercado
+                            <div class="details"><ul>
+                                <li>Benchmark: realizar un estudio de marcas de de las diferentes empresas del sector juguetero de Bogotá.</li>
+                                <li>Estimación: definir un objetivo en la producción para que sea competitivo en el mercado.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            1.3 Identificación de juguetes
+                            <div class="details"><ul>
+                                <li>Boceto de juguetes: crear de bocetos iniciales de los juguetes de heroe, villano y dinosaurio.</li>
+                                <li>Modelado de juguetes: crear de los modelos detallados de los juguetes de heroe, villano y dinosaurio.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            1.4 Definicion de Modulos
+                            <div class="details"><ul>
+                                <li>VSM: realizar el diagrama de Value Stream Mapping de el proceso antes y despues de la automatización</li>
+                                <li>Identificación de modulos: definir los modulos necesarios para la realización del proyecto.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            1.5 Viabilidad de modulos
+                            <div class="details"><ul>
+                                <li>Definicion de requerimientos: definir lso requerimientos especificos de cada uno de los modulos.</li>
+                                <li>Simulación: crear y probar el layout para la automatización del proceso.</li>
+                            </ul></div>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="stage">
+                    <h3>2. Diseño</h3>
+                    <p><strong>Investigación previa y planteamiento del proyecto</strong></p>
+                    <ul>
+                        <li onclick="toggleDetails(this)">
+                            2.1. Planeación de rutina
+                            <div class="details"><ul>
+                                <li>Diagrama de flujo: crear el diagrama de flujo del proceso de la planta.</li>
+                                <li>Diseño Grafcet: diseñar la rutina base en lenguaje Grafcet.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            2.2 Diseño de Mecanismos
+                            <div class="details"><ul>
+                                <li>Modelado en NX: crear modelos, establecer fisicas, listar las señales y seleccionar sensores y actuadores.</li>
+                                <li>Celda Robotizada: seleccionar el robot y establcer trayectorias junto a elementos de seguridad.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            2.3 Estimación de presupuestos
+                            <div class="details"><ul>
+                                <li>Seleccion: de controladores: seleccionar el controlador en base al mecanismo creado.</li>
+                                <li>Estimación de SCADA: definir el software SCADA a utilizar y definir su costo.</li>
+                                <li>Costos del proyecto: Establecer costos totales del proyecto, tanto a nivel de materiales como operativo.</li>
+                                <li>Definicion de indicadores: Definir los indicadores economicos del proyecto.</li>
+                            </ul></div>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="stage">
+                    <h3>3. Integración</h3>
+                    <p><strong>Implementación</strong></p>
+                    <ul>
+                        <li onclick="toggleDetails(this)">
+                            3.1 Comunicaciones
+                            <div class="details"><ul>
+                                <li>Establecer arquitectura: definir la arquitectura de comunicaciones a utilizar.</li>
+                                <li>Servidor OPC: crear el servidor de OPC para la comunicación.</li>
+                                <li>Pruebas: probar las comunicaciones en NX-Studio5000.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            3.2 Implementación Ladder
+                            <div class="details"><ul>
+                                <li>Traduccion a ladder: traducir de codigo Grafcet a ladder.</li>
+                                <li>Rutinas: crear las rutinas en NX-Studio5000.</li>
+                                <li>Pruebas: simular en el entorno de NX.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            3.3 Diseño HMI y SCADA
+                            <div class="details"><ul>
+                                <li>Configuracion: configurar el cliente y servidor de OPC.</li>
+                                <li>HMI: diseñar la interfaz grafica.</li>
+                                <li>Verificación: probar la intefraz en tiempo real junto con el gemelo digital.</li>
+                            </ul></div>
+                        </li>
+                        <li onclick="toggleDetails(this)">
+                            3.4 Documentación
+                            <div class="details"><ul>
+                                <li>Repositorio: crear la documentacion y subirla al repositorio de github.</li>
+                                <li>Pagina web: diseñar y producir la pagina web.</li>
+                            </ul></div>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+
+    
+        <script>
+            function toggleDetails(element) {
+                // Encuentra el elemento .details dentro del <li> que se hizo clic
+                var details = element.querySelector(".details");
+                // Alterna la clase 'show' para mostrar u ocultar el contenido
+                details.classList.toggle("show");
+            }
+        </script>
     </main>
     <footer>
         <p>&copy; 2025 Red Forge Toys. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        function toggleDetail(element) {
+            // Cierra todos los detalles antes de abrir el nuevo
+            document.querySelectorAll('.list-item').forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Alterna la visibilidad del detalle del elemento actual
+            element.classList.toggle('active');
+        }
+    </script>
 </body>

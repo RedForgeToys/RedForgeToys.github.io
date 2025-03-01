@@ -30,9 +30,11 @@
     </header>
     <main>
         <section class="grafica">
-            <h2>Participación del Mercado Colombiano</h2>
-            <canvas id="graficoMercado"></canvas>
-            <p class="analisis">[Espacio reservado para análisis]</p>
+            <div class = "horizontal">
+                <h2>Participación del Mercado Colombiano</h2>
+                <canvas id="graficoMercado"></canvas>
+                <p class="analisis">[Espacio reservado para análisis]</p>
+            </div>
         </section>
         
         <section class="valor-mercado">
@@ -87,7 +89,7 @@
             options: {
                 plugins: {
                     datalabels: {
-                        formatter: (value, ctx) => value + '%',
+                        formatter: (value, ctx) => value + '%', 
                         color: '#fff',
                         font: { weight: 'bold' }
                     }
