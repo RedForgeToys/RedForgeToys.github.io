@@ -1,68 +1,144 @@
-<html>
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
-        <script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-gantt.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4" type="text/javascript"></script>
-      </head>
-      <body>
-        <div id="container"></div>
-        <script>
-          anychart.onDocumentReady(function () {    
-            // create data
-            var data = [
-              {
-                id: "1",
-                name: "Alcance y espacios",
-                actualStart: "2024-11-11",
-                actualEnd: "2024-17-11",
-                children: [
-                  {
-                    id: "1_1",
-                    name: "Analysis",
-                    actualStart: "2018-01-15",
-                    actualEnd: "2018-01-25"
-                  },
-                  {
-                    id: "1_2",
-                    name: "Design",
-                    actualStart: "2018-01-20",
-                    actualEnd: "2018-02-04"
-                  },
-                  {
-                    id: "1_3",
-                    name: "Meeting",
-                    actualStart: "2018-02-05",
-                    actualEnd: "2018-02-05"
-                  },
-                  {
-                    id: "1_4",
-                    name: "Implementation",
-                    actualStart: "2018-02-05",
-                    actualEnd: "2018-02-24"
-                  },
-                  {
-                    id: "1_5",
-                    name: "Testing",
-                    actualStart: "2018-02-25",
-                    actualEnd: "2018-03-10"
-                  }
-              ]}
-            ];
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participación del Mercado Colombiano</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .grafica {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .horizontal {
+            display: flex;
+            align-items: flex-start; /* Asegura que el canvas y el texto estén alineados arriba */
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .grafico-container {
+            display: flex;
+            flex-direction: column; /* Asegura que la gráfica y la leyenda estén en columna */
+            align-items: center;
+            flex: 1;
+            max-width: 50%;
+            border: 1px;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .analisis {
+            flex: 1;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="grafica">
+        <h2>Participación del Mercado Colombiano</h2>
+        <div class="horizontal">
+            <!-- Contenedor para la gráfica y la leyenda -->
+            <div class="grafico-container">
+                <canvas id="graficoMercado"></canvas>
+                <div id="leyenda"></div>
+            </div>
+            <p class="analisis">
+                El mercado de juguetes está dominado por Mattel y Hasbro, que concentran la mayor participación gracias a su reconocimiento global y amplia distribución. 
+                Sin embargo, empresas nacionales como Inversiones Parra Pineros y Compañía y Colmuñecos han logrado posicionarse en nichos específicos, indicando oportunidades para fabricantes locales.
+                Marcas más pequeñas, como Fábrica de Muñecos y Comercializadora Muneplasticos SAS y Arisma, tienen una menor presencia, posiblemente enfocadas en segmentos especializados. 
+                La inclusión de Éxito, un minorista, sugiere que los distribuidores también juegan un papel clave en la comercialización.
+                Finalmente, la categoría "Otras" representa una parte significativa, reflejando un mercado fragmentado con espacio para nuevos competidores, especialmente en nichos diferenciados como juguetes ecológicos o tecnológicos. 
+                Aunque Mattel y Hasbro lideran, la diversidad de actores sugiere una industria en evolución con oportunidades de crecimiento.
+            </p>
+        </div>
+    </section>
+    <script>
+        const ctxMercado = document.getElementById('graficoMercado').getContext('2d');
+        new Chart(ctxMercado, { 
+            type: 'pie', 
+            data: { 
+                labels: ['Hasbro', 'Mattel', 'Inversiones Parra Pineros y Compañia', 'Colmuñecos', 'Exitoys', 'Fabrica de Muñecos y Comercializadora Muneplasticos Sas', 'Arisma', 'Ip Imaginarte SAS', 'Laurent', 'Otras'], 
+                datasets: [{ 
+                    data: [28, 41, 14, 1, 0, 1, 1, 0, 1, 13], 
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8D99AE', '#2B2D42', '#EF233C', '#D90429', '#A8DADC', '#457B9D', '#1D3557'] 
+                }] 
+            } ,
+            options: {
+                plugins: {
+                    datalabels: {
+                        formatter: (value, ctx) => value + '%', 
+                        color: '#fff',
+                        font: { weight: 'bold' }
+                    }
+                }
+            }
+        });
         
-            // create a data tree
-            var treeData = anychart.data.tree(data, "as-tree");    
-            // create a chart
-            var chart = anychart.ganttProject();        
-            // set the data
-            chart.data(treeData);
-            // set the container id
-            chart.container("container");    
-            // initiate drawing the chart
-            chart.draw();    
-            // fit elements to the width of the timeline
-            chart.fitAll();
-          });    
-        </script>
-      </body>
-    </html>
+        const ctxDemanda = document.getElementById('graficoDemanda').getContext('2d');
+        new Chart(ctxDemanda, { type: 'line', data: { labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], datasets: [{ label: 'Demanda 2025', data: [16537.6, 3434.1, 4807.692, 51208.8, 16357, 2060, 4120, 6181, 8241,5494,6868,164835], borderColor: 'blue', fill: false },
+        { label: 'Demanda 2032', data: [11256.35009,2363.124582,3308.374414,28357.49498,11256.35009,1417.874749,2835.749498,4253.624247,5671.498996,3780.999331,4726.249163,113429.9799], borderColor: 'red', fill: false }] } });
+         // Datos históricos
+         const historicalYears = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2008, 2009, 2010, 2011, 2012, 2013, 
+                                 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022];
+        const historicalBirthRates = [22.11, 21.58, 21.02, 20.44, 19.85, 19.27, 18.69, 17.70, 17.28, 16.91, 16.61, 16.34, 
+                                      16.09, 15.83, 15.59, 15.35, 15.08, 14.84, 14.68, 14.44, 14.20, 13.92];
+
+        // Proyecciones (Estos valores deben ser reemplazados con los obtenidos en la proyección)
+        const projectedYears = [2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032];
+        const projectedBirthRates = [13.75, 13.58, 13.42, 13.25, 13.09, 12.93, 12.78, 12.63, 12.48, 12.34]; 
+
+        // Configuración de la gráfica
+        const ctx = document.getElementById('birthRateChart').getContext('2d');
+        const birthRateChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [...historicalYears, ...projectedYears],
+                datasets: [
+                    {
+                        label: 'Histórico',
+                        data: historicalBirthRates,
+                        borderColor: 'purple',
+                        backgroundColor: 'rgba(0, 0, 255, 0.1)',
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        fill: false
+                    },
+                    {
+                        label: 'Proyección',
+                        data: [...Array(historicalYears.length).fill(null), ...projectedBirthRates],
+                        borderColor: 'green',
+                        backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        borderDash: [5, 5],
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Año' } },
+                    y: { title: { display: true, text: 'Tasa de Natalidad (%)' } }
+                }
+            }
+        });
+        //const ctxNatalidad = document.getElementById('graficoNatalidad').getContext('2d');
+        //new Chart(ctxNatalidad, { type: 'line', data: { labels: ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032'], 
+        //datasets: [{ label: 'Demanda 2025', data: [22.11,21.58,21.02,20.44,19.85,19.27,18.69,18.17,17.7,17.28,16.91,16.61,16.34,16.09,15.83,15.59,15.35,15.08,14.84,14.68,14.44,14.2,13.92,13.74,13.58,13.29,13.15,13.03,12.90,12.79,12.69,12.59], borderColor: 'green', fill: false }] } });
+    </script>
+</body>
+</html>

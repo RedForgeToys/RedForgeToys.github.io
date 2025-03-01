@@ -95,6 +95,7 @@ h1, h2 {
     margin: 20px;
     height: fit-content;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .team-container {
@@ -171,6 +172,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: 10px;
 }
 a.snek:link
 {

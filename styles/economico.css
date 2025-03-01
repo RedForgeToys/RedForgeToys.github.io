@@ -33,13 +33,8 @@ h2 {
     color: white;
 }
 
-.grafica{
-    display: flex;
-    justify-content: center;
-}
-
 .grafica, .demanda, .natalidad, .valor-mercado, .benchmarking {
-
+    justify-content: center;
     text-align: center;
     padding: 20px;
     background-color: #EFEFEF;
@@ -50,20 +45,34 @@ h2 {
 
 .horizontal {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+.grafico-container {
+    display: flex;
+    flex-direction: column; /* Asegura que la gráfica y la leyenda estén en columna */
+    align-items: center;
+    flex: 1;
+    max-width: 50%;
+}
+canvas {
+    width: 70% !important;  /* Se expande al máximo del contenedor */
+    max-width: 100%;  /* Evita que sobrepase su contenedor */
 }
 
+
 .analisis {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    text-align: justify;
     font-style: italic;
-    text-align: center;
     margin-top: 10px;
     color: #555;
 }
 
 #graficoMercado{
-    width: 300px;
-    height: 300px;
+    width: 30%;
+    height: 40%;
     margin: 0 auto;
 }
 #graficoDemanda{
