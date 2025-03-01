@@ -90,7 +90,37 @@ h1 {
 .details.show {
     display: block;
 }
-
+.canvas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+.box {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.title {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.socios { background-color: #f8b6b6; grid-column: 1; grid-row: 1 / span 2; }
+.actividades { background-color: #c2a2f0; grid-column: 2; grid-row: 1; }
+.propuesta { background-color: #c4f4c2; grid-column: 3; grid-row: 1 / span 2; }
+.relaciones { background-color: #fceaa5; grid-column: 4; grid-row: 1; }
+.segmentos { background-color: #add8e6; grid-column: 5; grid-row: 1 / span 2; }
+.recursos { background-color: #c2a2f0; grid-column: 2; grid-row: 2; }
+.canales { background-color: #fceaa5; grid-column: 4; grid-row: 2; }
+.estructura { background-color: #fdbd50; grid-column: 1 / span 2; grid-row: 3; }
+.fuentes { background-color: #a58fd3; grid-column: 3 / span 3; grid-row: 3; }
 /* Colores específicos para cada etapa */
 .stage:nth-child(1):before { background-color: #7D5BA6; }
 .stage:nth-child(2):before { background-color: #50BFA5; }
