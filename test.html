@@ -1,111 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Model Canvas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .canvas {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto auto auto;
-            gap: 10px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .box {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .title {
-            font-weight: bold;
-            text-align: center;
-            padding: 5px;
-            margin-bottom: 5px;
-            background-color: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-        .socios { background-color: #f8b6b6; grid-column: 1; grid-row: 1 / span 2; }
-        .actividades { background-color: #c2a2f0; grid-column: 2; grid-row: 1; }
-        .propuesta { background-color: #c4f4c2; grid-column: 3; grid-row: 1 / span 2; }
-        .relaciones { background-color: #fceaa5; grid-column: 4; grid-row: 1; }
-        .segmentos { background-color: #add8e6; grid-column: 5; grid-row: 1 / span 2; }
-        .recursos { background-color: #c2a2f0; grid-column: 2; grid-row: 2; }
-        .canales { background-color: #fceaa5; grid-column: 4; grid-row: 2; }
-        .estructura { background-color: #fdbd50; grid-column: 1 / span 2; grid-row: 3; }
-        .fuentes { background-color: #a58fd3; grid-column: 3 / span 3; grid-row: 3; }
-    </style>
-</head>
-<body>
-    <div class="canvas">
-        <div class="box socios">
-            <div class="title">Socios Clave</div>
-            <ul>
-                <li>Fabricantes y distribuidores de controladores, PLC, PAC, DCS (Rockwell)</li>
-                <li>Fabricantes y distribuidores de sensores y actuadores</li>
-                <li>Fabricantes y distribuidores de Robots, ARM’s y aplicaciones robóticas</li>
-                <li>Distribuidor de licencias de software SCADA</li>
-            </ul>
-        </div>
-        <div class="box actividades">
-            <div class="title">Actividades Clave</div>
-            <ul>
-                <li>Negociaciones y contacto con clientes potenciales y actuales</li>
-                <li>Negociaciones con socios clave</li>
-                <li>Investigación de posibles clientes y actuales</li>
-            </ul>
-        </div>
-        <div class="box recursos">
-            <div class="title">Recursos Clave</div>
-            <ul>
-                <li>Grupo Diseño NX</li>
-                <li>Grupo Diseño SCADA</li>
-                <li>Grupo Programación Ladder</li>
-            </ul>
-        </div>
-        <div class="box propuesta">
-            <div class="title">Propuesta de Valor</div>
-            <p>Soluciones a problemas de automatización, ajustadas a las necesidades de los clientes, con énfasis en el uso de herramientas de simulación y comunicaciones con software SCADA.</p>
-        </div>
-        <div class="box relaciones">
-            <div class="title">Relaciones con Cliente</div>
-            <ul>
-                <li>Retroalimentación de clientes vía comunidades virtuales</li>
-                <li>Asistencia personalizada</li>
-            </ul>
-        </div>
-        <div class="box canales">
-            <div class="title">Canales</div>
-            <ul>
-                <li>Plataformas en línea</li>
-                <li>Redes sociales</li>
-            </ul>
-        </div>
-        <div class="box segmentos">
-            <div class="title">Segmentos de Mercado</div>
-            <ul>
-                <li>Empresas con deseos de aumentar su eficiencia en manufactura de productos</li>
-            </ul>
-        </div>
-        <div class="box estructura">
-            <div class="title">Estructura de Costos</div>
-            <ul>
-                <li>Servidores SCADA</li>
-                <li>Licencias de software de diseño</li>
-            </ul>
-        </div>
-        <div class="box fuentes">
-            <div class="title">Fuentes de Ingresos</div>
-            <ul>
-                <li>Proyectos de automatización</li>
-                <li>Mantenimiento de plantas</li>
-                <li>Mantenimiento de SCADA</li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+<html>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+        <script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-gantt.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4" type="text/javascript"></script>
+      </head>
+      <body>
+        <div id="container"></div>
+        <script>
+          anychart.onDocumentReady(function () {    
+            // create data
+            var data = [
+              {
+                id: "1",
+                name: "Alcance y espacios",
+                actualStart: "2024-11-11",
+                actualEnd: "2024-17-11",
+                children: [
+                  {
+                    id: "1_1",
+                    name: "Analysis",
+                    actualStart: "2018-01-15",
+                    actualEnd: "2018-01-25"
+                  },
+                  {
+                    id: "1_2",
+                    name: "Design",
+                    actualStart: "2018-01-20",
+                    actualEnd: "2018-02-04"
+                  },
+                  {
+                    id: "1_3",
+                    name: "Meeting",
+                    actualStart: "2018-02-05",
+                    actualEnd: "2018-02-05"
+                  },
+                  {
+                    id: "1_4",
+                    name: "Implementation",
+                    actualStart: "2018-02-05",
+                    actualEnd: "2018-02-24"
+                  },
+                  {
+                    id: "1_5",
+                    name: "Testing",
+                    actualStart: "2018-02-25",
+                    actualEnd: "2018-03-10"
+                  }
+              ]}
+            ];
+        
+            // create a data tree
+            var treeData = anychart.data.tree(data, "as-tree");    
+            // create a chart
+            var chart = anychart.ganttProject();        
+            // set the data
+            chart.data(treeData);
+            // set the container id
+            chart.container("container");    
+            // initiate drawing the chart
+            chart.draw();    
+            // fit elements to the width of the timeline
+            chart.fitAll();
+          });    
+        </script>
+      </body>
+    </html>

@@ -93,6 +93,8 @@ h1, h2 {
     border: 1px solid #ddd;
     padding: 20px;
     margin: 20px;
+    height: fit-content;
+    justify-content: center;
 }
 
 .team-container {

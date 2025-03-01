@@ -112,6 +112,21 @@ h1 {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    justify-self: unset;
+    align-items: center; /* Centra verticalmente */
+    width: 80%;
+    height: 550px; /* O ajusta según necesites */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin:auto;
+}
+
+
 .socios { background-color: #f8b6b6; grid-column: 1; grid-row: 1 / span 2; }
 .actividades { background-color: #c2a2f0; grid-column: 2; grid-row: 1; }
 .propuesta { background-color: #c4f4c2; grid-column: 3; grid-row: 1 / span 2; }
