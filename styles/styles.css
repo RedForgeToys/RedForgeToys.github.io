@@ -103,6 +103,7 @@ h1, h2 {
     justify-content: space-around; /* Espacio entre los elementos */
     align-items: center; /* Alineación vertical */
     flex-wrap: wrap; /* Permite que los elementos se ajusten si la pantalla es pequeña */
+    gap:30px;
 }
 .horizontal {
     display: flex;
