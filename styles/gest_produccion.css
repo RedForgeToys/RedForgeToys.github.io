@@ -1,0 +1,67 @@
+.seccion1 {
+    background-color: #EFEFEF;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.texto {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    text-align: justify;
+}
+
+.imagen img {
+    max-width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+/* Diseño responsivo: Si la pantalla es pequeña, apila los elementos */
+@media (max-width: 768px) {
+    .seccion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen img {
+        max-width: 100%; /* Imagen más grande en móviles */
+    }
+}
+.container {
+    display: grid;
+    gap: 20px 40px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: 1fr 1fr; /* Dos filas */
+  }
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+body {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    text-align: justify;
+    font-style: italic;
+    color: #555;
+}
+.VSM{
+    width: 850px;
+}
+
+.imagen_izquierda {grid-column: 1;grid-row: 1;width: 100%;height: auto}
+.texto_derecha {grid-column: 2; grid-row: 1}
+.imagen_derecha {grid-column: 2;grid-row: 2;width: 100%;height: auto}
+.texto_izquierdo {grid-column: 1; grid-row: 2}

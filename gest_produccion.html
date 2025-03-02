@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Análisis Económico - Red Forge Toys</title>
+        <title>Gestion de Produccion y Automatización - Red Forge Toys</title>
         <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/economico.css">
+        <link rel="stylesheet" href="styles/gest_produccion.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     </head>
@@ -30,7 +30,42 @@
         </nav>
     </header>
     <main>
-
+        <section class="seccion1">
+            <div class="texto">
+                <p>
+                    Para hacer un proceso de automatización adecuado, es necesario tener un entendimiento del proceso a autmatizar
+                    y de los efectos que este tendra en la eficiencia y produccion. En esta seccion se estan los diagramas de Value Stream Mapping
+                    de antes y despues de la automatización, junto con las simulaciones para obseravar los cambios que hace esta en la cadena
+                    de automatización.
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="Images/8944870.png" alt="Ejemplo de imagen">
+            </div>
+        
+        </section>
+        <section class="seccion">
+            <h2>Diagramas de VSM</h2>
+            <div class="container">
+                <div class="imagen_izquierda"><img src="Images/pre-auto.jpeg" class = "VSM"></div>
+                <div class="texto_derecho"><h3>Diagrama VSM pre-automatizacion</h3>
+                <p>En este diagrama se puede ver que la estructura de la planta cuenta con una cantidad relativamente alta de empleados, un total de 14 por turno y 28 en total
+                    para los 2 turnos del dia. Se puede ver que los diferentes procesos tienen un tiempo alto, donde los procesos de pintura general y especifica toman 90 segundos y 120 segundos respectivamente,
+                    ademas despues de cada uno de estos procesos ocurre un secado que puede tomar hasta 3 minutos. Los tiempos de transporte tambien son un consumo de tiempo alto, especialmente entre el secado general
+                    y las pintura especifica.
+                </p></div>
+                <div class="imagen_derecha"><img src="Images/post-auto.jpeg" class = "VSM"></div>
+                <div class="texto_izquierdo"><h3>Diagrama VSM post-automatizacion</h3><p>
+                    Al aplicar el proceso de automatización se ve una reduccion considerable en los tiempos de varios procesos, como por ejemplo en los tiempos de secado, pintura y 
+                    el propio transporte. La pintura general ahora toma una tercera parte del tiempo original, siendo ahora 30 segundos, de igual forma el tiempo de pintado especifico tambien se
+                    redujo de manera notable psando a 10 segundos.Los tiempos de secado tambien se redujeron de forma considerable, tomando un tiempo maximo de 40 segundos, un poco mas de 4 minutos menos que
+                    el proceso antes de la automatización. Tambien se ve una dimsinucion en los tiempos de transporte en la planta.
+                </p></div>
+            </div>
+        </section>
+        <section>
+            a
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 Red Forge Toys. Todos los derechos reservados.</p>
