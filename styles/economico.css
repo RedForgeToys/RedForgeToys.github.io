@@ -37,6 +37,7 @@ h2 {
     width: 25%;
     border-collapse: collapse;
     margin: 20px 0;
+    margin: auto;
 }
 
 .inversion th, .inversion td, .ingreso_mensual th, .ingreso_mensual td {
@@ -54,7 +55,9 @@ h2 {
   color: #333;
   background: lightgray;
 }
-
+.inversion table{
+    margin:0 auto;
+}
 .grafica, .demanda, .natalidad, .valor-mercado, .benchmarking, .ingreso_mensual, .inversion {
     justify-content: center;
     text-align: center;
