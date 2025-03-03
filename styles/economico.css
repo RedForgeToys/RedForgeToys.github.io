@@ -66,6 +66,7 @@ h2 {
     border: 1px solid #ddd;
     margin: 20px 0;
     border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .horizontal {

@@ -1,0 +1,59 @@
+.video{
+    background-color: #EFEFEF;
+    border: 1px solid #ddd;
+    padding: 50px;
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top:20px
+}
+.texto {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+.embed_video{
+    margin:0 auto;
+}
+
+.imagen img {
+    max-width: 350px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+body{
+    text-align: justify;
+    font-style: italic;
+    color: #555;
+}
+.video_container {
+    position: relative;
+    width: 100%; /* Ajusta el tamaño del video */
+    max-width: 854px;
+    margin: 0 auto; /* Centra el video */
+    padding-top: 1%; /* Relación de aspecto 16:9 */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra atractiva */
+}
+
+.seccion1 {
+    background-color: #EFEFEF;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 20px;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}

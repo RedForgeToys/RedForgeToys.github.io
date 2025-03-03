@@ -1,27 +1,4 @@
-.seccion1 {
-    background-color: #EFEFEF;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-    margin-bottom: 20px;
-    gap: 20px; /* Espacio entre la imagen y el texto */
-}
 
-.texto {
-    flex: 1; /* Hace que el texto ocupe el espacio disponible */
-    text-align: justify;
-}
-
-.imagen img {
-    max-width: 300px; /* Ajusta el tamaño de la imagen */
-    height: auto;
-    border-radius: 10px; /* Bordes redondeados opcionales */
-}
 
 /* Diseño responsivo: Si la pantalla es pequeña, apila los elementos */
 @media (max-width: 768px) {
@@ -44,7 +21,6 @@
   }
 
 .texto {
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -57,6 +33,13 @@ body {
     font-style: italic;
     color: #555;
 }
+
+.imagen img {
+    max-width: 350px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
 .VSM{
     width: 100%;
 }
