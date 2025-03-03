@@ -1,4 +1,4 @@
-button {
+.button {
     background-color: #800020; /* Color de fondo */
     color: white; /* Color del texto */
     font-size: 16px; /* Tamaño del texto */
@@ -11,12 +11,12 @@ button {
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-button:hover {
+.button:hover {
     background-color: #a52a2a; /* Color más claro al pasar el cursor */
     transform: scale(1.05); /* Efecto de crecimiento */
 }
 
-button:active {
+.button:active {
     background-color: #5a0015; /* Color más oscuro al hacer clic */
     transform: scale(0.95); /* Efecto de pulsación */
 }

@@ -94,6 +94,8 @@ canvas {
 
 .datos_asdf{
     flex:1;
+    max-width: 45%;
+    margin-right: 50px
 }
 
 #graficoMercado{
