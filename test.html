@@ -3,89 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabs Verticales</title>
+    <title>Diagrama de Procesos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .contenedor {
             display: flex;
-            max-width: 800px;
-            margin: auto;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
         }
-
-        .menu {
+        .container {
             display: flex;
             flex-direction: column;
-            width: 200px;
-            border-right: 1px solid #ccc;
+            align-items: center;
+            position: relative;
         }
-
-        .menu button {
-            padding: 15px;
-            text-align: left;
-            border: none;
-            background: #f1f1f1;
+        .step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .box {
+            padding: 10px;
+            border: 2px solid black;
+            background: white;
             cursor: pointer;
-            font-size: 16px;
-            transition: 0.3s;
+            text-align: center;
+            min-width: 250px;
         }
-
-        .menu button:hover {
-            background: #ddd;
+        .line {
+            width: 2px;
+            height: 20px;
+            background: black;
+            margin: 0 auto;
         }
-
-        .menu button.active {
-            background: #007BFF;
-            color: white;
+        .loop-line {
+            position: absolute;
+            width: 2px;
+            height: 410px;
+            background: black;
+            top: 75%;
+            left: 50%;
+            transform: translate(-200px, -270px);
         }
-
-        .contenido {
-            flex: 1;
-            padding: 20px;
+        .horizontal-line {
+            position: absolute;
+            width: 200px;
+            height: 1px;
+            background: black;
+            top: 26.5%;
+            left: calc(50% - 200px);
         }
-
-        .tab-content {
+        .horizontal-line2 {
+            position: absolute;
+            width: 200px;
+            height: 1px;
+            background: black;
+            top: 100%;
+            left: calc(50% - 200px);
+        }
+        .modal {
             display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
         }
-
-        .tab-content.active {
-            display: block;
+        .modal-content {
+            background: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 50%;
+            text-align: center;
+        }
+        .close {
+            color: red;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-    <div class="contenedor">
-        <div class="menu">
-            <button class="tab-button active" onclick="mostrarContenido(0)">Opción 1</button>
-            <button class="tab-button" onclick="mostrarContenido(1)">Opción 2</button>
-            <button class="tab-button" onclick="mostrarContenido(2)">Opción 3</button>
-        </div>
-        <div class="contenido">
-            <div class="tab-content active">Contenido de la Opción 1</div>
-            <div class="tab-content">Contenido de la Opción 2</div>
-            <div class="tab-content">Contenido de la Opción 3</div>
+    <div class="container">
+        <div class="step"><div class="box" onclick="showModal('Inicializar Sistema')">E0: Inicializar Sistema</div></div>
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Arrancar banda transportadora')">E1: Arrancar banda</div></div>
+        
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Proceso de Pintura General')">E2: Pintura General</div></div>
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Proceso de Secado')">E3: Secado</div></div>
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Proceso de Ensamblado')">E4: Ensamblado</div></div>
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Proceso de Pintura Específica')">E5: Pintura Específica</div></div>
+        <div class="line"></div>
+        <div class="step"><div class="box" onclick="showModal('Proceso de Empaquetado')">E6: Empaquetado</div></div>
+        <div class="line"></div>
+        <div class="loop-line"></div>
+        <div class="horizontal-line"></div>
+        <div class="horizontal-line2"></div>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description">Detalles sobre el proceso...</p>
+            <img id="modal-image" src="" alt="Imagen del proceso">
         </div>
     </div>
-
+    
     <script>
-        function mostrarContenido(index) {
-            let botones = document.querySelectorAll(".tab-button");
-            let contenidos = document.querySelectorAll(".tab-content");
+        function showModal(title) {
+            const details = {
+                "Inicializar Sistema": { desc: "Se inicializa el sistema...", img: "img/inicializar.jpg" },
+                "Arrancar banda transportadora": { desc: "Se arranca la banda...", img: "img/banda.jpg" },
+                "Proceso de Pintura General": { desc: "Se realiza la pintura general...", img: "img/pintura_general.jpg" },
+                "Proceso de Secado": { desc: "Las piezas pasan por secado...", img: "img/secado.jpg" },
+                "Proceso de Ensamblado": { desc: "Ensamblaje de piezas manual...", img: "img/ensamblado.jpg" },
+                "Proceso de Pintura Específica": { desc: "Pintura detallada manual...", img: "img/pintura_especifica.jpg" },
+                "Proceso de Empaquetado": { desc: "Empaquetado en celda robotizada...", img: "img/empaquetado.jpg" }
+            };
+            
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-description").innerText = details[title].desc || "Detalles sobre el proceso...";
+            document.getElementById("modal-image").src = details[title].img || "";
+            document.getElementById("modal").style.display = "block";
+        }
 
-            botones.forEach((btn, i) => {
-                btn.classList.toggle("active", i === index);
-                contenidos[i].classList.toggle("active", i === index);
-            });
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
         }
     </script>
-
 </body>
 </html>
