@@ -1,0 +1,22 @@
+button {
+    background-color: #800020; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 12px 24px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+button:hover {
+    background-color: #a52a2a; /* Color más claro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+button:active {
+    background-color: #5a0015; /* Color más oscuro al hacer clic */
+    transform: scale(0.95); /* Efecto de pulsación */
+}

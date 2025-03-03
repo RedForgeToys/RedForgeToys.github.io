@@ -33,7 +33,29 @@ h2 {
     color: white;
 }
 
-.grafica, .demanda, .natalidad, .valor-mercado, .benchmarking {
+.ingreso_mensual table {
+    width: 25%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.inversion th, .inversion td, .ingreso_mensual th, .ingreso_mensual td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.ingreso_mensual th, .inversion th {
+    background-color: #800020;
+    color: white;
+}
+
+.ingreso_mensual tr:nth-child(8) {
+  color: #333;
+  background: lightgray;
+}
+
+.grafica, .demanda, .natalidad, .valor-mercado, .benchmarking, .ingreso_mensual, .inversion {
     justify-content: center;
     text-align: center;
     padding: 20px;
@@ -66,8 +88,12 @@ canvas {
     flex: 1; /* Hace que el texto ocupe el espacio disponible */
     text-align: justify;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #555;
+}
+
+.datos_asdf{
+    flex:1;
 }
 
 #graficoMercado{
