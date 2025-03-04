@@ -65,24 +65,51 @@
         </section>
         <section class="seccion">
             <h2>Simulación de Technomatix</h2>
-            <div class="horizontal">
-                <!-- Contenedor para la gráfica y la leyenda -->
-                <div class="team-container">
-                    <div>
-                        <img src="Images/planta_uwu.jpeg">
-                        <figcaption>1. Diseño de la planta</figcaption>
-                    </div><div>
-                        <img src="Images/ocupacion.jpeg">
-                        <figcaption>2. Ocupacion de las estaciones</figcaption>
-                    </div>
+            <div class = "contenedor">
+                <div class = "image2">
+                    <img src="Images/planta_uwu.jpeg">
+                    <figcaption>Diseño de la planta</figcaption>
                 </div>
-                <p class="analisis">
-                    Al aplicar el proceso de automatización se ve una reduccion considerable en los tiempos de varios procesos, como por ejemplo en los tiempos de secado, pintura y 
-                    el propio transporte. La pintura general ahora toma una tercera parte del tiempo original, siendo ahora 30 segundos, de igual forma el tiempo de pintado especifico tambien se
-                    redujo de manera notable psando a 10 segundos.Los tiempos de secado tambien se redujeron de forma considerable, tomando un tiempo maximo de 40 segundos, un poco mas de 4 minutos menos que
-                    el proceso antes de la automatización. Tambien se ve una dimsinucion en los tiempos de transporte en la planta.
-                </p>
+                <div class = "analisis">
+                    Se tienen los siguientes pasos para la produccion del juguete:
+                    <ol>
+                        <li>Zona de clasificacion: Primera etapa donde se clasifican las piezas que lleguen a la planta de acuerdo a la parte del juguete que sean, donde se colocan en una bandeja a espera de ser enviadas a la
+                            zona de pintura general.
+                        </li>
+                        <li>
+                            Pintura general: En esta seccion se aplica la primera capa de pintura a las piezas, el proceso consiste en bajar una bandeja con una rejilla mediante un actuador lineal a un contenedor con pintura,
+                            se deja reposar unos segundos y despues se eleva, quedando un tiempo adicional para escurrir la pintura excedente.
+                        </li>
+                        <li>
+                            Ensamblaje: Se hace el proceso de ensamblaje de manera manual por medio de los trabajadores de la planta.
+                        </li>
+                        <li>
+                            Tampografia: Se aplica una segunda capa de pintura a las figura utilizando maquinas tampograficas debido a su rapidez y capacidad de crear detalles pequeños a partir de los moldes base.
+                        </li>
+                        <li>
+                            Celda robotizada de empaquetado: Se utiliza una celda robotizada para hacer el empaquetado de los juguetes en las cajas, se explorara esta con mayor detalle en la seccion de celda robotizada.
+                        </li>
+                    </ol>
+                </div>
             </div>
+        </section>
+        <section class="seccion">
+            <h2>Resultados de Technomatix</h2>
+            <div class = "contenedor2">
+                <div class = "image3">
+                    <img src="Images/resumen.jpeg">
+                    <figcaption>Resumen de la simulacion</figcaption>
+                </div>
+                <div class = "image3">
+                    <img src="Images/ocupacion.jpeg">
+                    <figcaption>Ocupacion de las estaciones</figcaption>
+                </div>
+            </div>
+            <p>
+                Al correr las simulaciones se puede ver que las estaciones estan trabajando aproximadamente un 25% del tiempo, esto se debe a cuellos de botella donde principalmente las estaciones de pintura general y secado general
+                estan bloqueadas, incapaces de mover sus productos hacia la siguiente estacion, dando una oportunidad de mejora en el diseño general de la planta y el como se conecta una estacion con otro. En el resumen final de la simulacion
+                se ve que 
+            </p>
         </section>
     </main>
     <footer>

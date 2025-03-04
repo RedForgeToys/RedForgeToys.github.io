@@ -30,6 +30,79 @@
         </nav>
     </header>
     <main>
+        <section class="seccion1">
+            <div class="texto">
+                <h1>Celda Robotica</h1>
+                <p>
+                    Mediante un robot SCARA implementamos una rutina para hacer el empaquetado de los juguetes, a lo alrgo de esta seccion se describe el proceso paso a paso para 
+                    este proceso, ademas de explorar algunos de los riesgos asociados a una celda robotizada.
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="Images/celda.jpg" alt="Ejemplo de imagen">
+            </div>
+        </section>
+        <section class="seccion">
+            <div class = "horizontal">
+                <div class = "elementos">
+                    <h2>Descripcion</h2>
+                    <img src="Images/Digital/empaquetado.jpeg" alt="Ejemplo de imagen">
+                    <p>La celda robotizada utiliza un robot ABB IRB 920 para automatizar el proceso de empaquetado de juguetes terminados, minimizando la intervención humana y garantizando un flujo eficiente de producción.
+                         El robot recoge cada juguete de la línea de producción y lo coloca dentro de una caja previamente posicionada. Luego, toma la tapa y la coloca sobre la caja asegurando un cierre correcto.
+                         Una vez completado el empaque, se activa la banda transportadora de salida, que envía el producto a la zona de despacho.</p>
+                </div>
+                <div class = "separador"></div>
+                <div class = "elementos">
+                    <h2>Paso a Paso de Celda Robotizada</h2>
+                    <p>Hacer click en los recuadros para conocer mas detalles.</p>
+                    <div class="container">
+                        <div class="step"><div class="box" onclick="showModal('Recoger Caja')">Subproceso 1: Recoger Caja</div></div>
+                        <div class="line"></div>
+                        <div class="step"><div class="box" onclick="showModal('Dejar Caja Sobre La Banda Transportadora')">Subproceso 2: Dejar Caja Sobre La Banda Transportadora</div></div>        
+                        <div class="line"></div>
+                        <div class="step"><div class="box" onclick="showModal('Recoger Juguete')">Subproceso 3: Recoger Juguete</div></div>
+                        <div class="line"></div>
+                        <div class="step"><div class="box" onclick="showModal('Dejar Juguete Dentro De La Caja')">ESubproceso 4: Dejar Juguete Dentro De La Caja</div></div>
+                        <div class="line"></div>
+                        <div class="step"><div class="box" onclick="showModal('Recoger Tapa')">Subproceso 5: Recoger Tapa</div></div>
+                        <div class="line"></div>
+                        <div class="step"><div class="box" onclick="showModal('Colocar La Tapa Sobre La Caja')">Subproceso 6: Colocar La Tapa Sobre La Caja</div></div>
+                    </div>
+                </div>
+                <div>    
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <h2 id="modal-title"></h2>
+                            <p id="modal-description"></p>
+                            <img id="modal-image" src="" alt="Imagen del proceso">
+                        </div>
+                    </div>
+                    
+                    <script>
+                        function showModal(title) {
+                            const details = {
+                                "Recoger Caja": { desc: "", img: "Images/PLC/plc5.png" },
+                                "Dejar Caja Sobre La Banda Transportadora": { desc: "", img: "Images/PLC/plc6.png" },
+                                "Recoger Juguete" : {desc:"",img:"Images/PLC/plc7.png"},
+                                "Dejar Juguete Dentro De La Caja": { desc: "", img: "Images/PLC/plc8.png" },
+                                "Recoger Tapa": { desc: "", img: "Images/PLC/plc9.png" },
+                                "Colocar La Tapa Sobre La Caja": { desc: "", img: "Images/PLC/plc10.png" },
+                            };
+                            
+                            document.getElementById("modal-title").innerText = title;
+                            document.getElementById("modal-description").innerText = details[title].desc || "";
+                            document.getElementById("modal-image").src = details[title].img || "";
+                            document.getElementById("modal").style.display = "flex";
+                        }
+                
+                        function closeModal() {
+                            document.getElementById("modal").style.display = "none";
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
         <div class="contenedor">
             <div class="menu_vert">
                 <button class="tab-button active" onclick="mostrarContenido(0)">Riesgo de Impacto</button>

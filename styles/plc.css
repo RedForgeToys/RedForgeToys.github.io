@@ -14,7 +14,19 @@
     background-color: #a52a2a; /* Color más claro al pasar el cursor */
     transform: scale(1.05); /* Efecto de crecimiento */
 }
-
+.imagen{
+    width: 50%;
+}
+.imagen img{
+    width: 80%;
+}
+.texto {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
 .box {
     padding: 10px;
     border: 2px solid black;

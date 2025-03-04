@@ -75,3 +75,145 @@
 .contenido-interno p {
     flex: 1;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.step {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.step:hover {
+    background-color: #a52a2a; /* Color más claro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+.imagen{
+    width: 50%;
+}
+.imagen img{
+    width: 80%;
+}
+.texto {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.box {
+    padding: 10px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+    min-width: 250px;
+}
+.horizontal {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Mantiene los elementos centrados */
+    gap: 40px; /* Espacio entre las secciones */
+    height: fit-content; /* Ocupa toda la pantalla para centrar contenido */
+}
+
+.elementos { /* Simula papel */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%; /* Ajusta el tamaño de las secciones */
+}
+
+.elementos img{
+    width:80%;
+}
+
+/* Línea vertical separadora */
+.separador {
+    width: 2px; /* Grosor de la línea */
+    height: 600px; /* Altura de la línea */
+    background-color: black; /* Color de la línea */
+}
+
+
+
+.box:hover {
+    padding: 10px;
+    border: 2px solid black;
+    background: #800020;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    min-width: 250px;
+}
+
+.line {
+    width: 2px;
+    height: 20px;
+    background: black;
+    margin: 0 auto;
+}
+
+
+.loop-line {
+    position: absolute;
+    width: 2px;
+    height: 461px;
+    background: black;
+    top: 75%;
+    left: 50%;
+    transform: translate(-200px, -304px);
+}
+.horizontal-line {
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background: black;
+    top: 26.5%;
+    left: calc(50% - 200px);
+}
+.horizontal-line2 {
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background: black;
+    top: 100%;
+    left: calc(50% - 200px);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    max-height: 90%;
+    text-align: center;
+    position: relative;
+}
+.modal-image {
+    max-width: 100%;
+    max-height: 70%;
+    margin-top: 10px;
+}
+.close {
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
