@@ -34,9 +34,10 @@ h2 {
 }
 
 .flujo{
-    width: 80%;
+    width: fit-content;
     align-content: center;
 }
+
 
 .ingreso_mensual table {
     width: 25%;
@@ -80,6 +81,7 @@ h2 {
     justify-content: space-between;
     gap: 100px;
 }
+
 .grafico-container {
     display: flex;
     flex-direction: column; /* Asegura que la gráfica y la leyenda estén en columna */
@@ -87,6 +89,17 @@ h2 {
     flex: 1;
     max-width: 50%;
 }
+
+
+.grafico-container2 {
+    display: flex;
+    flex-direction: column; /* Asegura que la gráfica y la leyenda estén en columna */
+    align-items: center;
+    flex: 1;
+    max-width: 100%;
+}
+
+
 canvas {
     width: 70% !important;  /* Se expande al máximo del contenedor */
     max-width: 100%;  /* Evita que sobrepase su contenedor */
@@ -104,7 +117,12 @@ canvas {
 .datos_asdf{
     flex:1;
     max-width: 45%;
-    margin-right: 50px
+    margin-right: 50px;
+}
+.datos_asdf2{
+    flex:1;
+    max-width: 100%;
+    margin-right: 50px;
 }
 
 #graficoMercado{
