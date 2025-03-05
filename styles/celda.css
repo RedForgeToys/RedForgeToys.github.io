@@ -103,7 +103,7 @@
     justify-content: center;
     padding: 20px;
     font-size: 18px;
-    text-align: center;
+    text-align: justify;
 }
 .box {
     padding: 10px;
@@ -131,7 +131,12 @@
 .elementos img{
     width:80%;
 }
-
+body {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    text-align: justify;
+    font-style: italic;
+    color: #555;
+}
 /* Línea vertical separadora */
 .separador {
     width: 2px; /* Grosor de la línea */
