@@ -33,6 +33,11 @@ h2 {
     color: white;
 }
 
+.flujo{
+    width: 80%;
+    align-content: center;
+}
+
 .ingreso_mensual table {
     width: 25%;
     border-collapse: collapse;

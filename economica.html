@@ -41,15 +41,14 @@
                     <h2>Valor Total del Mercado (2023)</h2>
                     <p class="valor">COP 448.570.000.000,00</p>
                     <p class="analisis">
-                        El mercado de juguetes está dominado por Mattel y Hasbro, que concentran la mayor participación gracias a su reconocimiento global y amplia distribución. 
-                        Sin embargo, empresas nacionales como Inversiones Parra Pineros y Compañía y Colmuñecos han logrado posicionarse en nichos específicos, indicando oportunidades para fabricantes locales.
-                        Marcas más pequeñas, como Fábrica de Muñecos y Comercializadora Muneplasticos SAS y Arisma, tienen una menor presencia, posiblemente enfocadas en segmentos especializados. 
-                        La inclusión de Éxito, un minorista, sugiere que los distribuidores también juegan un papel clave en la comercialización.
-                        Finalmente, la categoría "Otras" representa una parte significativa, reflejando un mercado fragmentado con espacio para nuevos competidores, especialmente en nichos diferenciados como juguetes ecológicos o tecnológicos. 
-                        Aunque Mattel y Hasbro lideran, la diversidad de actores sugiere una industria en evolución con oportunidades de crecimiento.
+                        El mercado de juguetes está dominado por <b>Mattel</b> y <b>Hasbro</b>, que concentran la mayor participación gracias a su reconocimiento global y amplia distribución.
+                         Sin embargo, empresas nacionales como <b>Inversiones Parra Pineros y Compañía</b> y <b>Colmuñecos</b> han logrado posicionarse en nichos específicos,
+                          indicando oportunidades para fabricantes locales. Marcas más pequeñas, como <b>Fábrica de Muñecos</b> y <b>Comercializadora Muneplasticos SAS y Arisma</b>,
+                           tienen una menor presencia, posiblemente enfocadas en segmentos especializados. La inclusión de <b>Éxito</b>, un minorista en lo que refiere a producción de juguetes, sugiere que los distribuidores también juegan un papel clave en la comercialización.
+                            Finalmente, la categoría "Otras" representa una parte significativa, reflejando un mercado fragmentado con espacio para nuevos competidores, especialmente en nichos diferenciados como juguetes ecológicos o tecnológicos.
+                         Aunque <b>Mattel</b> y <b>Hasbro</b> lideran, la diversidad de actores sugiere una industria en evolución con oportunidades de crecimiento.
                     </p>
-                    <p class="analisis"><b>Nuestro objetivo es ocupar el 5% de este mercado, superando la producción de empresas colombianos que participan en el mismo con una produccion 
-                        de 0.7 juguetes por minuto nuestro mercado objetivo es:.</b></p>
+                    <p class="analisis"><b>Nuestro objetivo es ocupar el 5% de este mercado, superando la producción de empresas colombianos que participan en el mismo con una producción de 0,7 juguetes por minuto nuestro mercado objetivo es:</b></p>
                     <p class="valor">COP 22.428.500.000</p>
                 </div>
             </div>
@@ -232,18 +231,20 @@
         </section>
         <section class="demanda">
             <h2>Demanda Mensual Proyectada</h2>
+            <div class="flujo">
+                <canvas id="grafica"></canvas>
+            </div>
+            
+        </section>
+        <section class="demanda">
+            <h2>Demanda Mensual Proyectada</h2>
             <div class="horizontal">
                 <canvas id="graficoDemanda"></canvas>
                 <canvas id="birthRateChart"></canvas>
             </div>
             
         </section>
-        
-        <section class="natalidad">
-            <h2>Impacto de la Reducción de la Natalidad</h2>
-            
-            <p class="analisis">[Espacio reservado para análisis]</p>
-        </section>
+    
     </main>
     <footer>
         <p>&copy; 2025 Red Forge Toys. Todos los derechos reservados.</p>
@@ -317,6 +318,48 @@
                 scales: {
                     x: { title: { display: true, text: 'Año' } },
                     y: { title: { display: true, text: 'Tasa de Natalidad (%)' } }
+                }
+            }
+        });
+        const meses = Array.from({length: 98}, (_, i) => i); // Genera los meses 0-97
+        const flujo = [
+            -357661351.00, 31624031.13, -11488098.31, -3789961.99, 200210650.49, 60876949.15, -19186234.63, 
+            -7639030.15, 3908174.33, 92436742.01, 59106.17, 30851651.45, 792967147.13, 10222934.88, -12345561.86, 
+            -4990410.96, 189921087.83, 56795308.29, -19700712.76, -8667986.41, 2364739.93, 86948975.26, -1312835.52, 
+            28107768.08, 756267706.97, 7444846.49, -13202961.27, -6190770.13, 179632294.98, 52713972.81, -20215152.40, 
+            -9696865.70, 821421.01, 81461619.07, -2684674.56, 25364089.98, 719571012.47, 4666758.10, -14060360.67, 
+            -7391129.30, 169343502.13, 48632637.33, -20729592.05, -10725744.98, -721897.92, 75974262.88, -4056513.61, 
+            22620411.89, 682874317.96, 1888669.71, -14917760.08, -8591488.46, 159054709.28, 44551301.84, -21244031.69, 
+            -11754624.27, -2265216.85, 70486906.70, -5428352.66, 19876733.79, 646177623.46, -889418.68, -15775159.48, 
+            -9791847.63, 148765916.42, 40469966.36, -21758471.33, -12783503.55, -3808535.78, 64999550.51, -6800191.70, 
+            17133055.70, 609480928.95, -3667507.07, -16632558.88, -10992206.79, 138477123.57, 36388630.87, -22272910.97, 
+            -13812382.84, -5351854.71, 59512194.32, -8172030.75, 14389377.61, 572784234.45, -6445452.42, -17489914.14, 
+            -12192504.16, 128188860.46, 32307505.52, -22787324.13, -14841209.15, -6895094.17, 54025120.66, -9543799.17, 
+            11645840.78, 536089429.35, -6445452.42
+        ];
+
+        // Configuración del gráfico
+        const ctx1 = document.getElementById('grafica').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: meses,
+                datasets: [{
+                    label: 'Flujo de Caja',
+                    data: flujo,
+                    borderColor: '#800020',
+                    backgroundColor: 'rgba(128, 0, 32, 0.2)',
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#800020',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Mes' } },
+                    y: { title: { display: true, text: 'Flujo ($)' } }
                 }
             }
         });
