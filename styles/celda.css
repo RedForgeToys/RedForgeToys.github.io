@@ -209,9 +209,9 @@ body {
     text-align: center;
     position: relative;
 }
-.modal-image {
-    max-width: 100%;
-    max-height: 70%;
+.modal img {
+    max-height: 500px;
+    max-width: auto;
     margin-top: 10px;
 }
 .close {
