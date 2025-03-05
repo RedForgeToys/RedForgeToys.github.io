@@ -34,7 +34,7 @@
 .vista img {
     width: 80%;
     height: auto;
-    border: 2px solid #ddd;
+    border: 2px solid #dde;
     border-radius: 5px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
