@@ -1,3 +1,81 @@
+.contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu_vert {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border-right: 1px solid #ccc;
+}
+
+.menu_vert button {
+    padding: 14px;
+    text-align: left;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu_vert button:hover {
+    background: #800020;
+}
+
+.menu_vert button.active {
+    background: #800020;
+    color: white;
+}
+
+.contenido {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: #f1f1f1;
+}
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.Hazard {
+    width: 40%;
+    height: auto;
+}
+
+.contenido-interno {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.contenido-interno img {
+    width: 350px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+.contenido-interno p {
+    flex: 1;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -35,14 +113,55 @@
     text-align: center;
     min-width: 250px;
 }
+.horizontal {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Mantiene los elementos centrados */
+    gap: 40px; /* Espacio entre las secciones */
+    height: fit-content; /* Ocupa toda la pantalla para centrar contenido */
+}
 
+.elementos { /* Simula papel */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%; /* Ajusta el tamaño de las secciones */
+}
+
+.elementos img{
+    width:80%;
+}
+.elementos ul {
+    align-self: flex-start; /* Si .elementos usa display: flex */
+    text-align: left; /* Para asegurar que el texto de los <li> también quede alineado */
+    width: 100%; /* Para que el <ul> no se reduzca al contenido */
+    padding-left: 20px; /* Opcional: ajusta el margen izquierdo */
+}
 body {
     flex: 1; /* Hace que el texto ocupe el espacio disponible */
     text-align: justify;
     font-style: italic;
     color: #555;
 }
+/* Línea vertical separadora */
+.separador {
+    width: 2px; /* Grosor de la línea */
+    height: 600px; /* Altura de la línea */
+    background-color: black; /* Color de la línea */
+}
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4;
+}
+.seccion > h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%; /* Asegura que tome todo el ancho disponible */
+    margin: 0 auto; /* Centra el elemento si tiene ancho definido */
+}
 .box:hover {
     padding: 10px;
     border: 2px solid black;
@@ -59,6 +178,8 @@ body {
     background: black;
     margin: 0 auto;
 }
+
+
 .loop-line {
     position: absolute;
     width: 2px;
@@ -104,9 +225,9 @@ body {
     text-align: center;
     position: relative;
 }
-.modal-image {
-    max-width: 100%;
-    max-height: 70%;
+.modal img {
+    max-height: 500px;
+    max-width: auto;
     margin-top: 10px;
 }
 .close {
