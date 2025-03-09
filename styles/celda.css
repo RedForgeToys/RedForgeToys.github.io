@@ -131,6 +131,12 @@
 .elementos img{
     width:80%;
 }
+.elementos ul {
+    align-self: flex-start; /* Si .elementos usa display: flex */
+    text-align: left; /* Para asegurar que el texto de los <li> también quede alineado */
+    width: 100%; /* Para que el <ul> no se reduzca al contenido */
+    padding-left: 20px; /* Opcional: ajusta el margen izquierdo */
+}
 body {
     flex: 1; /* Hace que el texto ocupe el espacio disponible */
     text-align: justify;
@@ -144,7 +150,13 @@ body {
     background-color: black; /* Color de la línea */
 }
 
-
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4;
+}
 
 .box:hover {
     padding: 10px;
@@ -158,7 +170,7 @@ body {
 
 .line {
     width: 2px;
-    height: 20px;
+    height: 40px;
     background: black;
     margin: 0 auto;
 }

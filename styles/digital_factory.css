@@ -28,6 +28,20 @@
     border-radius: 10px; /* Bordes redondeados opcionales */
 }
 
+.video{
+    background-color: #EFEFEF;
+    border: 1px solid #ddd;
+    padding: 50px;
+    margin: 20px;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top:20px
+}
+
 body{
     text-align: justify;
     font-style: italic;
